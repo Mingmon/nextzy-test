@@ -1,5 +1,7 @@
 package com.example.android.newsapplication.model
 
+import android.os.Parcelable
+import kotlinx.android.parcel.Parcelize
 import androidx.recyclerview.widget.DiffUtil
 
 data class NewsResponse (
@@ -8,6 +10,7 @@ data class NewsResponse (
     var articles: List<NewsDetail>?
 )
 
+@Parcelize
 data class NewsDetail(
     val source : SourceItem?,
     val author : String?,
@@ -17,12 +20,13 @@ data class NewsDetail(
     val urlToImage : String?,
     val publishedAt : String?,
     val content : String?
-)
+): Parcelable
 
+@Parcelize
 data class SourceItem(
     val id : String?,
     val name : String?
-)
+): Parcelable
 
 class DealItemDiff : DiffUtil.ItemCallback<NewsDetail>() {
 

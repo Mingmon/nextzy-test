@@ -51,7 +51,7 @@ class NewsListFragment : Fragment() {
 
     private class OnNewsItemClick : NewsClickListenerParameter<NewsDetail> {
         override fun onClick(v: View?, item: NewsDetail) {
-            v?.findNavController()?.navigate(NewsListFragmentDirections.actionNewsListFragmentToNewsDetailFragment())
+            v?.findNavController()?.navigate(NewsListFragmentDirections.actionNewsListFragmentToNewsDetailFragment(item))
         }
     }
 

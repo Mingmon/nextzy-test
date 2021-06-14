@@ -17,5 +17,9 @@
         android:id="@+id/newsDetailFragment"
         android:name="com.example.android.newsapplication.newsDetail.NewsDetailFragment"
         android:label="newsDetailFragment"
-        tools:layout="@layout/news_detail_fragment"/>
+        tools:layout="@layout/news_detail_fragment">
+        <argument
+            android:name="news"
+            app:argType="com.example.android.newsapplication.model.NewsDetail"/>
+    </fragment>
 </navigation>
