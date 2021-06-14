@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.android.newsapplication.NewsClickListenerParameter
 import com.example.android.newsapplication.NewsListAdapter
@@ -50,9 +51,8 @@ class NewsListFragment : Fragment() {
 
     private class OnNewsItemClick : NewsClickListenerParameter<NewsDetail> {
         override fun onClick(v: View?, item: NewsDetail) {
-            TODO("Not yet implemented")
+            v?.findNavController()?.navigate(NewsListFragmentDirections.actionNewsListFragmentToNewsDetailFragment())
         }
-
     }
 
 }
