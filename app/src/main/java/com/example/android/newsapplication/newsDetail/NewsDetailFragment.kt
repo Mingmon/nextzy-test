@@ -15,8 +15,6 @@ class NewsDetailFragment : Fragment() {
     private lateinit var detailBinding: NewsDetailFragmentBinding
     private val args: NewsDetailFragmentArgs by navArgs()
 
-    private lateinit var viewModel: NewsDetailViewModel
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -33,6 +31,4 @@ class NewsDetailFragment : Fragment() {
     private fun setUpDetail() {
         detailBinding.newsList = args.news
     }
-
-
 }
