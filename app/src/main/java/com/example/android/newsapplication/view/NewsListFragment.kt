@@ -14,7 +14,7 @@ import com.example.android.newsapplication.common.NewsListAdapter
 import com.example.android.newsapplication.R
 import com.example.android.newsapplication.databinding.NewsListFragmentBinding
 import com.example.android.newsapplication.model.NewsDetail
-import com.example.android.newsapplication.newsList.NewsListFragmentDirections
+import com.example.android.newsapplication.view.NewsListFragmentDirections
 import com.example.android.newsapplication.viewModel.NewsListViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
 

@@ -1,7 +1,7 @@
 package com.example.android.newsapplication.model
 
 import android.os.Parcelable
-import kotlinx.android.parcel.Parcelize
+import kotlinx.parcelize.Parcelize
 import androidx.recyclerview.widget.DiffUtil
 
 data class NewsResponse(
