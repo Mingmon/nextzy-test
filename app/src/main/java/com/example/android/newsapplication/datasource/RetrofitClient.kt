@@ -6,11 +6,8 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
 
-fun provideOkHttpClient(): OkHttpClient {
-    return OkHttpClient.Builder()
-        .connectTimeout(60L, TimeUnit.SECONDS)
-        .readTimeout(60L, TimeUnit.SECONDS)
-        .build()
+fun provideOkHttpClient(authInterceptor: AuthInterceptor): OkHttpClient {
+    return OkHttpClient().newBuilder().addInterceptor(authInterceptor).build()
 }
 
 fun provideRetrofit(okHttpClient: OkHttpClient): Retrofit {

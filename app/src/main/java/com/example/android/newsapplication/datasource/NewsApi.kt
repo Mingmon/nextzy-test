@@ -4,6 +4,6 @@ import com.example.android.newsapplication.model.NewsResponse
 import retrofit2.http.GET
 
 interface NewsApi {
-    @GET("everything?q=Apple&apiKey=38294b59ee0146a0b7c7868be03fcab4")
+    @GET("everything?q=Apple")
     suspend fun getNews(): NewsResponse
 }
