@@ -1,1 +1,5 @@
 # nextzyTest
+
+✨ News Application 📰 ✨
+
+**Mingmon 😸**
