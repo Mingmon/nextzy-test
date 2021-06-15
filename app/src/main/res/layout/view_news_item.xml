@@ -17,7 +17,7 @@
 
 
         <ImageView
-            android:id="@+id/newsImageView"
+            android:id="@+id/view_news_iv_image"
             android:layout_width="150dp"
             android:layout_height="match_parent"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -27,26 +27,24 @@
             tools:srcCompat="@tools:sample/avatars" />
 
         <TextView
-            android:id="@+id/titleTextView"
+            android:id="@+id/view_news_tv_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
             android:layout_marginTop="8dp"
-            android:text="Title"
-            app:titleText="@{newsList}"
             android:textSize="24sp"
-            app:layout_constraintStart_toEndOf="@+id/newsImageView"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintStart_toEndOf="@+id/view_news_iv_image"
+            app:layout_constraintTop_toTopOf="parent"
+            app:titleText="@{newsList}" />
 
         <TextView
-            android:id="@+id/authorTextView"
+            android:id="@+id/view_news_tv_source"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="8dp"
-            android:text="Date Time"
-            app:authorText="@{newsList}"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:sourceText="@{newsList}" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

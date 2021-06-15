@@ -16,10 +16,10 @@ fun TextView.setTitleText(news: NewsDetail?) {
     }
 }
 
-@BindingAdapter("authorText")
-fun TextView.setAuthorText(news: NewsDetail?) {
-    news?.author?.let {
-        text = it
+@BindingAdapter("sourceText")
+fun TextView.sourceText(news: NewsDetail?) {
+    news?.source?.name?.let {
+        text = it.substringBefore(".")
     }
 }
 
