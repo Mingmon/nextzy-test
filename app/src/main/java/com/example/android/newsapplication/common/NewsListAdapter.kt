@@ -1,4 +1,4 @@
-package com.example.android.newsapplication
+package com.example.android.newsapplication.common
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -12,8 +12,9 @@ class NewsListAdapter(
     private val clickListenerParameter: NewsClickListenerParameter<NewsDetail>
 ) : ListAdapter<NewsDetail, NewsListAdapter.ViewHolder>(DealItemDiff()) {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NewsListAdapter.ViewHolder {
-        val viewBinding = ViewNewsItemBinding.inflate(LayoutInflater.from(parent.context),parent,false)
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+        val viewBinding =
+            ViewNewsItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return ViewHolder(viewBinding)
     }
 
@@ -22,16 +23,16 @@ class NewsListAdapter(
         holder.bindView(item)
     }
 
-    inner class ViewHolder (private val viewBinding: ViewNewsItemBinding) :
+    inner class ViewHolder(private val viewBinding: ViewNewsItemBinding) :
         RecyclerView.ViewHolder(viewBinding.root) {
 
         init {
             viewBinding.root.setOnClickListener {
-                clickListenerParameter.onClick(it,getItem(layoutPosition))
+                clickListenerParameter.onClick(it, getItem(layoutPosition))
             }
         }
 
-        fun bindView(news:NewsDetail) {
+        fun bindView(news: NewsDetail) {
             viewBinding.newsList = news
             viewBinding.executePendingBindings()
         }

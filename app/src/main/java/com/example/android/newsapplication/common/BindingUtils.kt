@@ -1,4 +1,4 @@
-package com.example.android.newsapplication
+package com.example.android.newsapplication.common
 
 import android.annotation.SuppressLint
 import android.widget.ImageView
@@ -28,13 +28,14 @@ fun TextView.sourceText(news: NewsDetail?) {
 @BindingAdapter("authorText")
 fun TextView.setAuthorText(news: NewsDetail?) {
     news?.author?.let {
-        text = it.substringAfterLast("/").replace("-"," ")
+        text = it.substringAfterLast("/").replace("-", " ")
     }
 }
+
 @BindingAdapter("dateTimeText")
 fun TextView.setDateTimeText(news: NewsDetail?) {
     news?.publishedAt?.let {
-        text = it.replace("[-TZ]".toRegex()," ")
+        text = it.replace("[-TZ]".toRegex(), " ")
     }
 }
 

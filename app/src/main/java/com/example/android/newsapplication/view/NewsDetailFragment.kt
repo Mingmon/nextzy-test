@@ -1,4 +1,4 @@
-package com.example.android.newsapplication.newsDetail
+package com.example.android.newsapplication.view
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -9,6 +9,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.navigation.fragment.navArgs
 import com.example.android.newsapplication.R
 import com.example.android.newsapplication.databinding.NewsDetailFragmentBinding
+import com.example.android.newsapplication.newsDetail.NewsDetailFragmentArgs
 
 class NewsDetailFragment : Fragment() {
 
@@ -19,7 +20,8 @@ class NewsDetailFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        detailBinding = DataBindingUtil.inflate(inflater,R.layout.news_detail_fragment, container, false)
+        detailBinding =
+            DataBindingUtil.inflate(inflater, R.layout.news_detail_fragment, container, false)
         return detailBinding.root
     }
 

@@ -1,4 +1,4 @@
-package com.example.android.newsapplication
+package com.example.android.newsapplication.common
 
 import android.view.View
 

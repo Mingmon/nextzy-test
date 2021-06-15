@@ -4,8 +4,8 @@ import com.example.android.newsapplication.datasource.AuthInterceptor
 import com.example.android.newsapplication.datasource.provideNewsApi
 import com.example.android.newsapplication.datasource.provideOkHttpClient
 import com.example.android.newsapplication.datasource.provideRetrofit
-import com.example.android.newsapplication.newsList.NewsListFragment
-import com.example.android.newsapplication.newsList.NewsListViewModel
+import com.example.android.newsapplication.view.NewsListFragment
+import com.example.android.newsapplication.viewModel.NewsListViewModel
 import com.example.android.newsapplication.repo.NewsRepository
 import com.example.android.newsapplication.usecase.NewsUseCase
 import org.koin.dsl.module
@@ -21,7 +21,7 @@ val repoModule = module {
     factory { NewsRepository(get()) }
 }
 
-val viewModelModule = module{
+val viewModelModule = module {
     factory { NewsListViewModel(get()) }
 }
 

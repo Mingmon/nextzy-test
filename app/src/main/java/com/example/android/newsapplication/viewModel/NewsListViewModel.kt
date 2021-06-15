@@ -1,4 +1,4 @@
-package com.example.android.newsapplication.newsList
+package com.example.android.newsapplication.viewModel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
