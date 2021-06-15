@@ -6,6 +6,7 @@ import com.example.android.newsapplication.datasource.provideRetrofit
 import com.example.android.newsapplication.newsList.NewsListFragment
 import com.example.android.newsapplication.newsList.NewsListViewModel
 import com.example.android.newsapplication.repo.NewsRepository
+import com.example.android.newsapplication.usecase.NewsUseCase
 import org.koin.dsl.module
 
 val networkModule = module {
@@ -24,4 +25,8 @@ val viewModelModule = module{
 
 val fragmentModule = module {
     factory { NewsListFragment() }
+}
+
+val useCaseModule = module {
+    factory { NewsUseCase(get()) }
 }
