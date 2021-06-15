@@ -61,7 +61,7 @@ fun ImageView.setNewsImage(news: NewsDetail?) {
             .transform(
                 MultiTransformation(
                     CenterCrop(),
-                    GranularRoundedCorners(15.0F, 0F, 0F, 15.0F)
+                    GranularRoundedCorners(30.0F, 0F, 0F, 30.0F)
                 )
             )
             .into(this)
